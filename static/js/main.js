@@ -9,7 +9,8 @@ testProxy = function () {
 			alert(respound);
 		});
 	}
-}
+	
+};
 
 $( document ).ready(function () {
 
