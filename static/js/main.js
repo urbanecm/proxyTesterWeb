@@ -1,4 +1,4 @@
-testProxy = function {
+testProxy = function () {
 
 	var ip = $('#ip').val();
 	var port = $('#port').val();
