@@ -14,6 +14,7 @@
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import flask
+from flask import request
 
 
 app = flask.Flask(__name__)
@@ -21,3 +22,10 @@ app = flask.Flask(__name__)
 @app.route('/')
 def index():
 	return flask.render_template('index.html', text="Hello little world!")
+
+@app.route('/test')
+	ip = request.args.get('ip')
+	port = request.args.get('port')
+	if ip == None or port == None:
+		return "You must pass both params"
+	return "Ip: " + ip + ", port: " + port
