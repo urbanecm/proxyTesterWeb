@@ -5,11 +5,11 @@ testProxy = function () {
 
 	if (ip != '')
 	{
-		$.get("https://tools.wmflabs.org/proxies/checkProxy?ip=" + ip + "?port=" + port function ( respound ) {
+		$.get("https://tools.wmflabs.org/proxies/checkProxy?ip=" + ip + "?port=" + port, function ( respound ) {
 			alert(respound);
 		});
 	}
-	
+
 };
 
 $( document ).ready(function () {
