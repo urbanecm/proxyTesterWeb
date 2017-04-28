@@ -24,6 +24,7 @@ def index():
 	return flask.render_template('index.html', text="Hello little world!")
 
 @app.route('/test')
+def test():
 	ip = request.args.get('ip')
 	port = request.args.get('port')
 	if ip == None or port == None:
