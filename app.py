@@ -24,4 +24,4 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
-	return flask.render_template('index.html', text="Hello world!")
+	return flask.render_template('index.html', text="Hello little world!")
