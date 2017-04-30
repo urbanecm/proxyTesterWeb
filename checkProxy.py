@@ -20,4 +20,4 @@ def check_proxy(ip, port):
 	except:
 		return "connection lost"
 
-print check_proxy("65.94.95.178", 3128)
+print(check_proxy("65.94.95.178", 3128))
