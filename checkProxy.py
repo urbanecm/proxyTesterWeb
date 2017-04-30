@@ -20,3 +20,5 @@ def check_proxy(ip, port):
                 sys.exit(0)
 	except:
 		return "connection lost"
+
+print check_proxy("65.94.95.178", 3128)
