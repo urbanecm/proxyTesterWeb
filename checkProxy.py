@@ -14,8 +14,8 @@ def check_proxy(ip, port):
 			return True
 		else:
 			return False
-		except KeyboardInterrupt as e:
-			print("Ctrl+c was pressed. Exiting!!!")
-			sys.exit(0)
-		except:
-			return "connection lost"
+	except KeyboardInterrupt as e:
+		print("Ctrl+c was pressed. Exiting!!!")
+		sys.exit(0)
+	except:
+		return "connection lost"
