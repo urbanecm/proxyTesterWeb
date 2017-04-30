@@ -15,7 +15,7 @@
 
 import flask
 from flask import request
-
+import checkProxy as cp
 
 app = flask.Flask(__name__)
 
@@ -29,4 +29,5 @@ def checkProxy():
 	port = request.args.get('port')
 	if ip == None or port == None:
 		return "You must pass both params"
-	return "Ip: " + ip + ", port: " + port
+	proxyTest = cp.check_proxy(ip, port)
+	return proxyTest

@@ -6,7 +6,8 @@ testProxy = function () {
 	if (ip != '')
 	{
 		$.get("https://tools.wmflabs.org/proxies/checkProxy?ip=" + ip + "&port=" + port, function ( respound ) {
-			alert(respound);
+			$( "<h1>" + respound + "</h1>" ).appendTo( "#returnVal" );
+			//alert(respound);
 		});
 	}
 
