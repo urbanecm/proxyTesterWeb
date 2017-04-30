@@ -7,15 +7,16 @@ import sys
 
 def check_proxy(ip, port):
 	try:
-		proxy = {'http' : 'http//' + ip + ':' + str(port)}
+		proxy = {'http' : 'http://' + ip + ':' + str(port)}
 		proxy = urllib.urlopen("http://httpbin.org/ip", proxies=proxy).read()
-		proxy = re.findall(r'"([^"]*)"', proxy)
-		if ip in proxy:
-			return True
+  		proxy = re.findall(r'"([^"]*)"', proxy)
+	        if ip in proxy[1]:
+	        	return True
 		else:
-			return False
-	except KeyboardInterrupt as e:
-		print("Ctrl+c was pressed. Exiting!!!")
-		sys.exit(0)
+                  	return False
+ 
+ 	except KeyboardInterrupt:
+	        print "Ctrl+C was pressed. Quitting. "
+                sys.exit(0)
 	except:
 		return "connection lost"
