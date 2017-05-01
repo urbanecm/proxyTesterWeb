@@ -32,9 +32,9 @@ def checkProxy():
 	ip = request.args.get('ip')
 	port = request.args.get('port')
 	if ip == None or port == None:
-		return "You must pass both params"
+		return flask.render_template('boiler.html', text="You must pass both params")
 	proxyTest = cp.check_proxy(ip, port)
-	return proxyTest
+	return flask.render_template('boiler.html', text=proxyTest)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(host="0.0.0.0")
