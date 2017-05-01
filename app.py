@@ -31,3 +31,6 @@ def checkProxy():
 		return "You must pass both params"
 	proxyTest = cp.check_proxy(ip, port)
 	return proxyTest
+
+if __name__ == "__main__":
+	app.run()
