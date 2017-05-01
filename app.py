@@ -13,11 +13,15 @@
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import sys
+sys.path.insert(0, '/home/martin/public_html/proxies')
+
 import flask
 from flask import request
 import checkProxy as cp
 
 app = flask.Flask(__name__)
+application = app
 
 @app.route('/')
 def index():
