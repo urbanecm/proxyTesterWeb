@@ -10,7 +10,7 @@ def check_proxy(ip, port):
 		proxy = {'http' : 'http://' + ip + ':' + str(port)}
 		proxy = urllib.urlopen("http://httpbin.org/ip", proxies=proxy).read()
 		proxy = re.findall(r'"([^"]*)"', proxy)
-		if ip in proxy[1]:
+		if ip in proxy[1] or ip in proxy[0]:
 			return True
 		else:
 			return False
